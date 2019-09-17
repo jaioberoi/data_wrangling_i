@@ -1,9 +1,12 @@
 ---
 title: "sept17_data_wrangling_i"
-output: html_document
+output: github_document
 ---
 
+```
 library(tidyverse)
+```
+
 
 
 
