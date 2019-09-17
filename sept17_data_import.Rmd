@@ -100,3 +100,15 @@ pulse_data
 ```
 
 
+know the difference between read_csv and read.csv 
+
+factor variable vs character var 
+
+
+
+
+
+
+
+
+
