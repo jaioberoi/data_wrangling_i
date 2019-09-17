@@ -3,9 +3,34 @@ title: "sept17_data_wrangling_i"
 output: github_document
 ---
 
-```
+```{r}
 library(tidyverse)
 ```
+
+load in a dataset: 
+
+relative path: starts from where you are and then goes to file location 
+eg: "./data/data_import_examples/FAS_litters.csv" when we are in data_wrangling_i 
+
+
+```{r}
+## reads in a dataset 
+litters_data = read_csv(file="./data/data_import_examples/FAS_litters.csv")
+
+litters_data 
+
+```
+
+print data = good 1st step (onlt first few rows and columns)
+
+to take janitor clean names and show them in the file 
+```{r}
+litters_data = janitor::clean_names(litters_data)
+
+litters_data
+```
+
+
 
 
 
