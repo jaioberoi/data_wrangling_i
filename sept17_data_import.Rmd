@@ -15,7 +15,7 @@ eg: "./data/data_import_examples/FAS_litters.csv" when we are in data_wrangling_
 
 ```{r}
 ## reads in a dataset 
-litters_data = read_csv(file="./data/data_import_examples/FAS_litters.csv")
+litters_data = read_csv(file = "./data/data_import_examples/FAS_litters.csv")
 
 litters_data 
 
@@ -34,9 +34,11 @@ loading pups_data:
 
 ```{r}
 ## reads in a dataset 
-pups_data = read_csv(file="./data/data_import_examples/FAS_pups.csv")
+pups_data = read_csv(file = "./data/data_import_examples/FAS_pups.csv")
 
 pups_data 
+
+#clean name function is in the janitor package 
 
 pups_data = janitor::clean_names(pups_data)
 
@@ -44,5 +46,57 @@ pups_data
 
 ```
 
+only use view function on console - not rmd file 
+
+```{r}
+head(pups_data)
+
+tail(pups_data)
+
+library(skimr)
+
+skim(pups_data)
+
+#skim function is in the skimr package and provides skim stats about the data
+
+```
+
+
+Parsed with column specification:
+cols(
+  Group = col_character(),
+  `Litter Number` = col_character(),
+  `GD0 weight` = col_double(),
+  `GD18 weight` = col_double(),
+  `GD of Birth` = col_double(),
+  `Pups born alive` = col_double(),
+  `Pups dead @ birth` = col_double(),
+  `Pups survive` = col_double()
+)
+
+^tells the type of data in each column 
+
+
+You can use the readeacel package to load excel datsets as well 
+
+```{r}
+library(readxl)
+
+mlb11_data = read_excel(path = "./data/data_import_examples/mlb11.xlsx")
+
+mlb11_data
+
+```
+
+Read in SAS 
+
+```{r}
+
+pulse_data = haven::read_sas("./data/data_import_examples/public_pulse_data.sas7bdat")
+
+pulse_data
+
+
+```
 
 
