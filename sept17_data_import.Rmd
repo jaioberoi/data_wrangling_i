@@ -105,6 +105,20 @@ know the difference between read_csv and read.csv
 factor variable vs character var 
 
 
+exporting data: 
+```{r}
+library(readxl)
+
+mlb11_data_subet = read_excel(
+  path = "./data/data_import_examples/mlb11.xlsx", 
+                        range = "A1:D7")
+
+write( )
+
+mlb11_data
+
+```
+
 
 
 
