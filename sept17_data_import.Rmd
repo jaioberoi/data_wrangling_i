@@ -106,6 +106,7 @@ factor variable vs character var
 
 
 exporting data: 
+
 ```{r}
 library(readxl)
 
